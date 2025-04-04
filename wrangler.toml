@@ -1,7 +1,6 @@
-name = "chauffagiste-lyon"
+name = "chauffage"
 compatibility_date = "2025-04-04"
 main = "src/index.js"
 
-[site]
-bucket = ".next/static"
+# Suppression de la section [site] qui cherche un dossier inexistant
 

@@ -1,11 +1,9 @@
-// Exemple de Worker simple pour servir votre site Next.js
+// Worker simple pour gérer les redirections et servir votre site
 addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request))
 })
 
 async function handleRequest(request) {
-  // Vous pouvez personnaliser cette logique selon vos besoins
-  // Par exemple, rediriger le trafic du blog vers WordPress
   const url = new URL(request.url)
 
   // Rediriger les requêtes du blog vers WordPress
@@ -13,7 +11,7 @@ async function handleRequest(request) {
     return Response.redirect(`https://blog.chauffagiste-lyon.com${url.pathname.replace("/blog", "")}`, 301)
   }
 
-  // Sinon, continuer vers votre site Next.js
+  // Pour toutes les autres requêtes, les transmettre normalement
   return fetch(request)
 }
 
