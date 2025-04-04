@@ -1,0 +1,7 @@
+name = "chauffagiste-lyon"
+compatibility_date = "2025-04-04"
+main = "src/index.js"
+
+[site]
+bucket = ".next/static"
+
